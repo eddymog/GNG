@@ -4,25 +4,20 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import IntroScreen from './src/screens/IntroScreen';
 import LoginScreen from './src/screens/LoginScreen';
-
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen!!!</Text>
-      </View>
-    );
-  }
-}
+import LoginInScreen from './src/screens/LoginInScreen';
+import RegisterScreen from './src/screens/RegisterScreen';
+import ProfileScreen from './src/screens/ProfileScreen';
 
 const AppNavigator = createStackNavigator(
   {
-    Home: HomeScreen,
     Intro: IntroScreen,
-    Login: LoginScreen
+    Login: LoginScreen,
+    Register: RegisterScreen,
+    Profile: ProfileScreen,
+    LoginIn: LoginInScreen
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'Intro',
     defaultNavigationOptions: {
       title: 'Introduction'
     }
